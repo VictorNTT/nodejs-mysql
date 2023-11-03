@@ -1,12 +1,13 @@
 /* 
 Step 1: install mysql first 
 $  npm install mysql
+
 Run app
-$ npm mysql-conn.js print_option (json or csv)
+$ node mysql-conn.js print_option (json or csv)
 
 Example:
-$ npm mysql-conn.js json
-$ npm mysql-conn.js csv
+$ node mysql-conn.js json
+$ node mysql-conn.js csv
 */
 
 var program_name = process.argv[0]; 
@@ -48,6 +49,8 @@ con.connect(function(err) {
 			}
 			console.log(str);
 		}
+		
+		console.log("\nPress Ctrl + C to quit");
 	}
   });
   
